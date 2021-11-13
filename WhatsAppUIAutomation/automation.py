@@ -1,5 +1,4 @@
 import time
-
 from selenium import webdriver
 import allure
 from selenium.webdriver import Keys
