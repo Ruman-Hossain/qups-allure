@@ -98,13 +98,12 @@ class WhatsAppUi:
 
     @allure.severity(allure.severity_level.MINOR)
     def verify_logout(self):
-        pass
-        # try:
-        #     menu_xpath = '//*[@id="side"]/header/div[2]/div/span/div[3]'
-        #     self.wait.until(ec.presence_of_element_located((By.XPATH, menu_xpath))).click()
-        #     logout_xpath = '//*[@id="side"]/header/div[2]/div/span/div[3]/span/div[1]/ul/li[5]'
-        #     self.wait.until(ec.presence_of_element_located((By.XPATH, logout_xpath))).click()
-        #     print("Log Out Action Done Successfully.")
-        # except (NoSuchElementException, Exception) as bug:
-        #     print(bug)
-        #     self.verify_logout()
+        try:
+            menu_xpath = '//*[@id="side"]/header/div[2]/div/span/div[3]'
+            self.wait.until(ec.presence_of_element_located((By.XPATH, menu_xpath))).click()
+            logout_xpath = '//*[@id="side"]/header/div[2]/div/span/div[3]/span/div[1]/ul/li[5]'
+            self.wait.until(ec.presence_of_element_located((By.XPATH, logout_xpath))).click()
+            print("Log Out Action Done Successfully.")
+        except (NoSuchElementException, Exception) as bug:
+            print(bug)
+            self.verify_logout()
