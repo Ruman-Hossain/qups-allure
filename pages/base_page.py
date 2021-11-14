@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
@@ -12,18 +11,11 @@ class BasePage(object):
         self.suffix_link = 'https://wa.me/'
         self.driver.get(self.base_url)
 
-        self.timeout = 30
-
-        self.number = ''
-        self.message = ''
-        self.read_status = ''
-        self.delivered_status = ''
-
     def find_element(self, *locator):
         return self.driver.find_element(*locator)
 
     def open(self, number):
-        url = self.base_url + number
+        url = self.suffix_link + number
         self.driver.get(url)
 
     def get_title(self):

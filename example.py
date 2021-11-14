@@ -18,9 +18,9 @@ def load_excel(r, input_message):
     # OUTPUT WRITE TO EXCEL FILE
     sheet.cell(row=r, column=3).value = whatsapp.message
     sheet.cell(row=r, column=4).value = whatsapp.sent_status
-    sheet.cell(row=r, column=4).value = whatsapp.read_status
-    sheet.cell(row=r, column=5).value = whatsapp.login_status
-    sheet.cell(row=r, column=6).value = whatsapp.logout_status
+    sheet.cell(row=r, column=5).value = whatsapp.read_status
+    sheet.cell(row=r, column=6).value = whatsapp.login_status
+    sheet.cell(row=r, column=7).value = whatsapp.logout_status
     workbook.save('./whatsapp_ui.xlsx')
     print("DATA INSERTED SUCCESSFULLY IN ROW " + str(r))
     # print(f'SL No : {sl_no} \n Number : {number} \n '

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class SearchNumberLocator(object):
+class LoginLocator(object):
     ACTION_BUTTON = (By.XPATH, '//*[@id="action-button"]')
     GO_TO_WEB = (By.XPATH, '//*[@id="fallback_block"]/div/div/a')
 

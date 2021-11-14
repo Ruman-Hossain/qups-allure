@@ -4,7 +4,7 @@ from utils.locators import *
 
 class SearchNumber(BasePage):
     def __init__(self):
-        self.locator = SearchNumberLocator
+        self.locator = LoginLocator
         super().__init__()
 
     def search(self, number):

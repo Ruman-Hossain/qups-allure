@@ -5,6 +5,10 @@ from utils.test_cases import test_cases
 
 
 class WhatsAppChatTest (BaseTest):
+    def __init__(self):
+        super().__init__()
+        self.message = 'Test Message Sending'
+
     def test_number_search(self):
         pass
         # print("\n" + str(test_cases(0)))
@@ -15,13 +19,13 @@ class WhatsAppChatTest (BaseTest):
     def test_send_message(self):
         print("\n" + str(test_cases(1)))
         page = ChatPage(self.driver)
-        message_sent = page.message_sent()
+        message_sent = page.message_sent(self.message)
         self.assertIn("Yes", message_sent)
 
     def test_successful_send_message(self):
         print("\n" + str(test_cases(1)))
         page = ChatPage(self.driver)
-        successful_status = page.successful_send_message()
+        successful_status = page.successful_send_message(self.message)
         self.assertIn("Yes", successful_status)
 
     def test_message_seen_status(self):
