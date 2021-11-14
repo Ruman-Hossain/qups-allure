@@ -1,11 +1,16 @@
 import unittest
 
+from selenium import webdriver
+
 
 class BaseTest(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get('https://web.whatsapp.com/')
+
+    def tearDown(self):
+        self.driver.close()
 
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(pages)
-    unittest.TextTestRunner(verbosity=1).run(suite)
+    pass

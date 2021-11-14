@@ -48,4 +48,18 @@ Go to
     pip install -r requirements.txt
 ```
 
-## Project Code Explanation
+## Test Automation Using Row Code
+Run the *example.py* file from the terminal using the command 
+```shell
+python example.py
+```
+### How It Works
+1. Opens the Excel Workbook *whatsapp_ui.xlsx*
+2. After Opening the *whatsapp* sheet from the work book read the number cell of the row that is given as input
+3. Now Opens the whatsapp web link and search for the number.
+4. Opens the chat box of the given number
+5. Sends message that is given as input message
+6. checks the message status
+7. logout from whatsapp
+8. Insert Output data in the excel file and saves it
+9. close the web driver 

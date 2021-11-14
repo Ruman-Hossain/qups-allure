@@ -6,13 +6,14 @@ from selenium.webdriver.support import expected_conditions as ec
 
 
 class BasePage(object):
-    def __init__(self):
-        self.driver = webdriver.Chrome()
-        self.base_url = 'https://web.whatsapp.com/'
+    def __init__(self, driver, base_url='https://web.whatsapp.com/'):
+        self.base_url = base_url
+        self.driver = driver
         self.suffix_link = 'https://wa.me/'
         self.driver.get(self.base_url)
-        self.driver.maximize_window()
-        self.wait = WebDriverWait(self.driver, 100)
+
+        self.timeout = 30
+
         self.number = ''
         self.message = ''
         self.read_status = ''
