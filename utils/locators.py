@@ -8,21 +8,13 @@ class SearchNumberLocator(object):
 
 class SendMessageLocator(object):
     MESSAGE_BOX = (By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]')
+    ITEM_LOC = "div.y8WcF > div:last-child > div > div > div > div._1beEj > div > div > span"
 
 
 class SeenStatusLocator(object):
-    READ_CHECKER = (By.CLASS_NAME, 'YYcY9')
-    DELIVERED_CHECKER = (By.CLASS_NAME, '')
-    BELOW_LAST_MESSAGE = (By.CLASS_NAME, 'VjtCX')
-
-    # area-label = Pending | Delivered | Read
-    #                   Last Message
-    # <span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class="">
-    #   <svg><path></path></svg></span>
-    #               Horizontal Line Below Last Message
-    # <div class="VjtCX" style="height: 0px;"></div>
+    ITEM_LOC = 'div.y8WcF > div:last-child > div > div > div > div._1beEj > div > div > span'
 
 
 class LogoutLocator(object):
-    MENU_ICON = (By.XPATH, '//*[@id="side"]/header/div[2]/div/span/div[3]')
-    LOGOUT = (By.XPATH, '//*[@id="side"]/header/div[2]/div/span/div[3]/span/div[1]/ul/li[5]')
+    MENU_ICON_XPATH = (By.XPATH, '//*[@id="side"]/header/div[2]/div/span/div[3]')
+    LOGOUT_XPATH = (By.XPATH, '//*[@id="side"]/header/div[2]/div/span/div[3]/span/div[1]/ul/li[4]/div[1]')
